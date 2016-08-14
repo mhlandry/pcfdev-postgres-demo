@@ -32,3 +32,17 @@ Demo project for connecting to PCF Dev Postgres Service with a Spring Boot app
     1. Verify the app is running.
     2. Verify the database is `Postgres`.
     3. Verify the status of the database is `Up`.
+ 
+## Troubleshooting
+
+* Spring Boot 1.4 does not currently work in Cloud Foundry (as of 2016.08.14).  When pushing the app, the push will fail and you will get a class not found exception.  See one of the answers in this [Stack Overflow](http://stackoverflow.com/questions/35712435/spring-boot-java-lang-classnotfoundexception-org-springframework-context-appl) post
+
+## Resources
+
+The following resources were very helpful in figuring this out.
+* [Stack Overflow Answer with the PCF Dev hostname of the db] (http://stackoverflow.com/questions/38232758/how-use-posgres-or-mongo-databases-in-pcf-devpivotal-cloudfoundry-dev)
+* [Official PCF Dev Usage Docs](https://docs.pivotal.io/pcf-dev/usage.html)
+* [Spring Cloud Connector Docs](http://cloud.spring.io/spring-cloud-connectors/spring-cloud-spring-service-connector.html)
+* [Binging to Data Services with Spring Boot in Cloud Foundry](https://spring.io/blog/2015/04/27/binding-to-data-services-with-spring-boot-in-cloud-foundry)
+* [Deploying Spring Boot DZone article](https://dzone.com/articles/deploying-spring-boot)
+* [Stack Overflow question on connecting pgAdmin3 to a database on a VM](http://stackoverflow.com/questions/16665438/how-to-connect-pgadmin3-to-a-database-on-virtualbox-machine)
